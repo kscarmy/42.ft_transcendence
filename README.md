@@ -1,78 +1,91 @@
 # ft_transcendence
-Last 42 common core project
 
-Clean 
+Le README reste a faire.
+
+En attendant voici le .env \
+Il est ignoré dans .gitignore, donc il faut bien le donner quelque part afin de tester le projet...\
+Les secrets sont volontairement peut sécurisés, on devait pouvoir les utiliser facilement des dizaines de fois par heures. Si ce doit etre mis en prod, forcement que ce serait changé, et pas public sur github !
+
+### Pour lancer le projet donc
 ```sh
-sudo apt-get clean
-sudo apt-get autoremove
-sudo apt-get purge $(dpkg -l | awk '/^rc/ { print $2 }')
-sudo rm -rf /var/cache/*
-sudo journalctl --vacuum-time=1d
-rm -rf ~/.local/share/Trash/*
+touch .env
 ```
 
-# TODO
-- [x] remove temporary logout button from `templates/navbar.html`
-### Bugs
-- Severe:
-    - [ ] Connecting from another pc, not localhost give 403 error
-    - [ ] music error message when doing nothing `Autoplay was prevented: DOMException: play() failed because the user didn't interact with the document first. https://goo.gl/xX8pDD` `music.js:14`
-    - [ ] logout button not working because of music button
-- Moderate:
-    - [ ] notif join button not working? no error in chrome console
-    - [ ] uncomment music.js but first fix the constant loop trying to play it
-- Minor:
-    - [ ] when refreshing host particles stay on guest
-    - [ ] sometimes there's an AI in multi game, not sure how to recreate
-    - [ ] nginx 10s to close (not critical but worth investigating)
-### Multiplayer
-- login
-    - [ ] when signing in, if signed in on another machine, logout other user and redirect to home with message "logged in from remote location"
-- multi config page:
-    - [ ] fix small field size when nothing inside
-    - [ ] player search field:
-        - [ ] should transform into field like player 1 when player chosen but remain clickable afterwards
-        - [ ] upon hovering show `X` button
-        - [ ] bring that same style to tournament creation, 4 empty fields that fill up 
-        - [ ] find way to make field big even when innerHtml is "" nothing
-    - [ ] don't send notification to host on creation if regular multi game (not tournament)
-- tournament config page:
-    - [ ] send notification to everyone
-- multiplayer game management (notifs and list):
-    - [ ] should notif also be sent to host? -> in tournament creation yes, otherwise no
-    - [ ] `listGameInvite` view that shows list of games you're allowed to join (in case you miss the notif)
-    - [ ] `Cancel Match` button that deletes normal multiplayer games
-    - [ ] `Forfeit Match` button that forfeits tournament multiplayer games
-- multiplayer game:
-    - [x] update score remotely
-    - [x] countdown
-    - [x] trigger `player` wins this game! text
-    - [x] redirect home if not allowed to see a game
-    - [x] game creation select player with searchPlayer in stateMachine (started making template already), need to change buttons behavior
-    - [x] when p2 is handled remove public access to games, no more spectators (in `views.py`), `isSpectator()`
-    - [ ] reloading finished game:
-        - [ ] Problem 1: if host reloads his finished game it will be an AI background game but game data will be broadcasted
-        - [ ] Problem 2: countdown stays on screen for some reason on guest
-    - [ ] add a `Waiting for {{p2.name}}...` on same field as countdown when user is not here
-    - player disconnection after match start?:
-        - [ ] make pause menu
-        - [ ] resume game in terrain center and start countdown
-        - [ ] if guest disconnects, pause game wait for reconnection, after 15 seconds give option to cancel match
-        - [ ] if host disconnects, pause game, after 15 seconds give option to cancel match
-        - [ ] if it's a tournament, declare no winner, next match in tournament is a win by forfeit
-    - [ ] guest perspective:
-        - [ ] rotate game field 180 degrees
-        - [ ] invert inputs if `isMultiGuest()`
-        - [ ] dont invert colors, keep player1 red and player2 green
-        - [ ] need to interpolate too
-- in `consumer.py`:
-    - [x] receive data in a smarter way for hostGameInfo only using a `type` field as a proof of concept
-    - [ ] receive method seems to do everything, no if checks for type, ask guillaume
-- [ ] ask guillaume about `gameType`, `resetGameInfo()` and `toState()`
-    - I believe its causing some issues at the end of games and on page refresh
-    - These functions should set `gameType` and `multiData` properly if needed:
-        - [ ] `initGameVariable()`
-        - [ ] `resetGameInfo()`
-        - [ ] `toState()`
-        - [ ] `preConfig()`
-        - [ ] `postConfig()`
+Inserer dedans les variables d'environnement suivantes :
+
+```sh
+
+# POSTGRES_HOST_AUTH_METHOD=trust
+POSTGRES_USER=postgres             
+POSTGRES_PASSWORD=postgres
+POSTGRES_DB=postgres
+POSTGRES_HOST=postgres
+POSTGRES_PORT=5432
+POSTGRES_ENGINE="django.db.backends.postgresql"
+
+#grafana
+GF_SECURITY_ADMIN_USER=grafana
+GF_SECURITY_ADMIN_PASSWORD=adminpassword123
+GF_SERVER_ROOT_URL=%(protocol)s://%(domain)s:%(http_port)s/grafana/
+GF_SERVER_SERVE_FROM_SUB_PATH=true
+
+# Discord alerts
+DISCORD_WEBHOOK="https://discord.com/api/webhooks/1251195705301667872/KCoPeQygUtFXvGd-8g6_i7G16lnJ7414di6uaYVygTbgyBNSl4wyqdw8-zWNgGgqDwBQ"
+
+# elasticsearch
+ELASTIC_USERNAME=elastic
+ELASTIC_PASSWORD=DidierDidier
+bootstrap.memory_lock=true
+discovery.type=single-node
+xpack.security.enabled=true
+xpack.monitoring.collection.enabled=true
+xpack.security.http.ssl.enabled=false
+
+# logstash
+xpack.monitoring.enabled=true
+
+# Blockchain settings
+API_URL="https://eth-sepolia.g.alchemy.com/v2/4uryTCcwOBqa6dyrL9ajVJiTblBGXYgW"
+PRIVATE_KEY="a5fd090aae2bfd9bf0b1bc3bef44dcbaaabc2681f891da32edbbfe5cc05ce5b5"
+API_KEY="4uryTCcwOBqa6dyrL9ajVJiTblBGXYgW"
+CONTRACT_ADDRESS="0x2971a35217A1c844C18aF535FbeC63d8A097760F"
+ETHERSCAN_API_KEY="7KBZM4CKIPXNYN36BW1IC9BN94XA5R5D74"
+
+# Django secret key
+DJANGO_SECRET_KEY='ebL1UDQ:Dt2i2l2UvsJ3A@s=/t8[..:£2}",eRGg|7ie=^=M5u'
+
+# SuperUser
+SUPERUSER_ID='admin'
+SUPERUSER_PASSWORD='02y5zTF#1{_~2['
+
+```
+
+
+Faites un 
+```sh
+make
+```
+
+Premier demarrage ? Docker va devoir telecharger et preparer un certain nombres d'images.\
+Faites vous un café, revenez plus tard.
+
+Bloqué ?
+
+```sh
+make help
+```
+
+### La documentation
+
+dispo dans le dossier `./docs/`
+
+
+## Auteurs
+
+Projet réalisé par :
+- [kscarmy](https://github.com/kscarmy)
+- [MaloP47](https://github.com/MaloP47)
+- [noapoleon](https://github.com/noapoleon)
+- [ftrenstein](https://github.com/ftrenstein)
+- [brunet-guillaume](https://github.com/brunet-guillaume)
+
