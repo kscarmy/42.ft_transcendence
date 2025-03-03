@@ -11,3 +11,6 @@
 /data
 /django_app
 /services/django/app/staticfiles
+
+# macOS
+*.DS_Store
