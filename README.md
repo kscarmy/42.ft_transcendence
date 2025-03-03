@@ -8,7 +8,7 @@
 `ft_transcendence` est le projet final du cursus 42. Il vise à créer une plateforme web interactive pour jouer au jeu Pong en ligne, incluant des fonctionnalités multijoueurs en temps réel, des tournois, et des options avancées via des modules spécifiques.\
 Ce projet respecte les contraintes techniques strictes tout en mettant en avant des choix technologiques justifiés et une architecture moderne.
 
-Mon rôle, a été de contribuer aux aspects DevOps, notamment la gestion des logs avec ELK, la mise en place de systèmes de monitoring avec Grafana, et la conception du backend en microservices.\
+Mon rôle, a été de contribuer aux aspects DevOps, notamment la gestion des logs avec ELK, la mise en place de systèmes de monitoring avec Grafana, et la conception du backend en microservices.
 
 Ce README détaille le projet, ses fonctionnalités et les technologies utilisées.
 
@@ -30,10 +30,10 @@ Ce README détaille le projet, ses fonctionnalités et les technologies utilisé
   - [Étapes](#étapes)
 - [Utilisation](#utilisation)
 - [Contributions](#contributions)
-- [Licence](#licence)
-- [Captures d’écran](#captures-décran)
-- [Exemple de configuration `.env`](#exemple-de-configuration-env)
-- [Gestion avec Makefile](#gestion-avec-makefile)
+- [Captures d’écran - WEB](#captures-décran---web)
+- [Captures d’écran - DEVOPS](#captures-décran---devops)
+- [Documentation](#documentation)
+- [Auteurs](#auteurs)
 
 ## Fonctionnalités principales
 
@@ -41,6 +41,11 @@ Ce README détaille le projet, ses fonctionnalités et les technologies utilisé
 - **Interface utilisateur** : Application web monopage (SPA) compatible avec Google Chrome.
 - **Tournois** : Organisation de tournois, avec un système de matchmaking automatisé.
 - **Déploiement simplifié** : Lancement via des commandes gérées par un `Makefile`.
+
+\
+\
+[⬆ Retour à la Table des matières ⬆](#table-des-matières)
+
 
 ## Technologies utilisées
 
@@ -56,6 +61,10 @@ Ce README détaille le projet, ses fonctionnalités et les technologies utilisé
   - **Grafana et Prometheus** : Monitoring.
   - **Architecture microservices** : pour le Backend.
 
+\
+\
+[⬆ Retour à la Table des matières ⬆](#table-des-matières)
+
 ## Modules implémentés
 
 
@@ -63,8 +72,20 @@ Les modules ci-dessous ont été implémentés par l’équipe, comme visible da
 
 ![assignment.global](./docs/ft_transcendence.assignment.global.capture.png)
 
-Mes parties
+&nbsp; 
+&nbsp; 
+&nbsp; 
+---
+
+&nbsp; 
+### Mes domaines
 ![assignment.kscarmy](./docs/ft_transcendence.assignment.kscarmy.capture.png)
+
+
+\
+\
+[⬆ Retour à la Table des matières ⬆](#table-des-matières)
+
 
 ### Partie obligatoire
 
@@ -115,22 +136,26 @@ Mes parties
    - Amélioration visuelle avec ThreeJS/WebGL pour une expérience immersive en 3D.
 
 
+\
+\
+[⬆ Retour à la Table des matières ⬆](#table-des-matières)
+
 ## Installation
 
 Pour lancer le projet localement :
 
 ### Prérequis
-   - Docker et Docker Compose installés.
-   - Git pour cloner le dépôt.
-   - Minimum 4Go de RAM, 8Go recommandés.
+- Docker et Docker Compose installés.
+- Git pour cloner le dépôt.
+- Minimum 4Go de RAM, 8Go recommandés.
 
-	| OS | Distribution | Architecture | Support |
-	| --- | --- | --- | --- |
-	| Linux | Debian | x86 | ✅ |
-	| Linux | Debian / ARMbian | xARM | ✅ >=8Go Ram |
-	| Linux | Ubuntu / Xubuntu | x86 | ✅ |
-	| MacOS | Sequoia 15.2 | Apple ARM | ✅ |
-	| Windows | 10 / 11 | x86 | ❌ non testé |
+| OS | Distribution | Architecture | Support |
+| --- | --- | --- | --- |
+| Linux | Debian | x86 | ✅ |
+| Linux | Debian / ARMbian | xARM | ✅ >=8Go Ram |
+| Linux | Ubuntu / Xubuntu | x86 | ✅ |
+| MacOS | Sequoia 15.2 | Apple ARM | ✅ |
+| Windows | 10 / 11 | x86 | ❌ non testé |
 
 
 ### Étapes
@@ -217,6 +242,10 @@ Pour lancer le projet localement :
 
  **Remarque** : Les variables d’environnement (clés API, mots de passe) qui sont stockées dans le fichier `.env` sont ignoré par Git pour des raisons de sécurité. Dans le cadre de la démonstration du README, on les fournis dans afin de tester le porojet.
 
+\
+\
+[⬆ Retour à la Table des matières ⬆](#table-des-matières)
+
 ## Utilisation
 
 - **Jouer à Pong** : Créez un Compte, Connectez-vous et Créez / Rejoingnez une partie ou un tournoi !
@@ -225,22 +254,140 @@ Pour lancer le projet localement :
 - **Chat** : Utilisez le chat en direct pour communiquer avec d’autres joueurs ou les inviter à une partie.
 - **Monitoring** : Consultez les logs via ELK et les métriques via Grafana pour surveiller le système.
 
+\
+\
+[⬆ Retour à la Table des matières ⬆](#table-des-matières)
+
 ## Contributions
 
 Ce projet a été réalisé en équipe. Les contributions sont visibles dans l’historique Git et le suivi des tâches ([GitHub Projects](https://github.com/users/MaloP47/projects/4/views/1)).
 
-Ouvert aux contributiuons 🙂
+Ouvert à de nouvelles contributiuons 🙂
 
 
-## Licence
+<!-- ## Licence
 
-Pas encore fait
+Pas encore fait -->
 <!-- Ce projet est sous licence [MIT](LICENSE) – voir le fichier `LICENSE` pour plus de détails. -->
 
-## Captures d’écran
+\
+\
+[⬆ Retour à la Table des matières ⬆](#table-des-matières)
 
-Actuellement pas encore intégrés au `README.md`, voir dans `./docs/` pour les captures d'écran.
+## Captures d’écran - WEB
 
+<!-- Actuellement pas encore intégrés au `README.md`, voir dans `./docs/` pour les captures d'écran. -->
+
+
+### Accueil - non connecté
+![default.unlogged.capture](./docs/ft_transcendence.default.unlogged.capture.png)
+
+### Login
+![login.capture](./docs/ft_transcendence.login.capture.png)
+
+### Register
+![register.capture](./docs/ft_transcendence.register.capture.png)
+
+### Accueil - connecté
+![default.logged.capture](./docs/ft_transcendence.default.logged.capture.png)
+
+### Exemple chat global
+![default.chat.capture](./docs/ft_transcendence.default.chat.capture.png)
+
+### Parametres profil - par default
+![profile.edit.capture.1](./docs/ft_transcendence.profile.edit.capture.1.png)
+
+### Parametres profil - édité
+![profile.edit.capture.2](./docs/ft_transcendence.profile.edit.capture.2.png)
+
+### Parametres profil - statistiques
+![profile.stats.capture](./docs/ft_transcendence.profile.stats.capture.1.png)
+
+### Local VS AI
+![local.ai.capture](./docs/ft_transcendence.local.ai.capture.png)
+
+### Game - Local VS AI
+![local.ai.game.capture.1](./docs/ft_transcendence.local.ai.game.capture.1.png)
+
+### Game Lose - Local VS AI
+![local.ai.game.capture.2](./docs/ft_transcendence.local.ai.game.capture.2.png)
+
+### Local Users 1 VS 1
+![local.uservs.capture](./docs/ft_transcendence.local.uservs.capture.png)
+
+### Online 1 VS 1
+![multi.online.capture](./docs/ft_transcendence.multi.online.capture.png)
+
+
+
+\
+\
+[⬆ Retour à la Table des matières ⬆](#table-des-matières)
+
+
+## Captures d’écran - DEVOPS
+
+### ELK - Exemple - Nginx
+![elk.nginx.capture](./docs/ft_transcendence.elk.nginx.capture.1.png)
+
+### ELK - Exemple - Django avec filtres sur nom d'utilisateur
+![elk.django.jean.capture](./docs/ft_transcendence.elk.django.jean.capture.png)
+
+### Grafana - Dashboards
+![grafana.dashboard.list.capture](./docs/ft_transcendence.grafana.dashboards.list.capture.png)
+
+### Grafana - Graphes de Nginx
+![grafana.nginx.capture](./docs/ft_transcendence.grafana.nginx.capture.png)
+
+### Grafana - Graphes utilisation memoire par conteneurs
+![grafana.memory.je suis pas oblige de noter capture a chaque fois...](./docs/ft_transcendence.grafana.memory.capture.png)
+
+### Grafana - Alerting
+![grafana.alert.capture](./docs/ft_transcendence.grafana.alert.capture.png)
+
+### Grafana - Status conteneurs `**Avant Simulation de Crash**`
+![grafana.conteneurs.capture.1](./docs/ft_transcendence.grafana.conteneurs.capture.1.png)
+
+### LazyDocker - Status conteneurs `**Avant Simulation de Crash**`
+![lazydocker.nginx.capture.1](./docs/ft_transcendence.lazydocker.nginx.capture.1.png)
+
+---
+### `**Arret Manuel de Nginx afin de simuler un Crash**`
+---
+
+### LazyDocker - Status conteneurs `**Crash**`
+![lazydocker.nginx.capture.2](./docs/ft_transcendence.lazydocker.nginx.capture.2.png)
+
+### Grafana - Status conteneurs `**Crash**`
+![grafana.conteneurs.capture.2](./docs/ft_transcendence.grafana.conteneurs.capture.2.png)
+
+### Discord - Alerte `**Crash**`
+![discord.alert.capture.1](./docs/ft_transcendence.discord.alert.capture.1.png)
+
+---
+### `**Demarrage Manuel de Nginx afin d'arreter la simulation du Crash**`
+---
+
+### LazyDocker - Status conteneurs `**Up**`
+![lazydocker.nginx.capture.3](./docs/ft_transcendence.lazydocker.nginx.capture.3.png)
+
+### Grafana - Status conteneurs `**Up**`
+![grafana.conteneurs.capture.3](./docs/ft_transcendence.grafana.conteneurs.capture.3.png)
+
+### Discord - Alerte `**RESOLU**`
+![discord.alert.capture.2](./docs/ft_transcendence.discord.alert.capture.2.png)
+
+
+
+
+\
+\
+[⬆ Retour à la Table des matières ⬆](#table-des-matières)
+
+
+## Documentation
+
+Le sujet du projet [fr.sujet.ft_transcendence.pdf](docs/fr.sujet.ft_transcendence.pdf)
 
 ## Auteurs
 
@@ -250,3 +397,8 @@ Projet réalisé par :
 - [noapoleon](https://github.com/noapoleon)
 - [ftrenstein](https://github.com/ftrenstein)
 - [brunet-guillaume](https://github.com/brunet-guillaume)
+
+
+\
+\
+[⬆ Retour à la Table des matières ⬆](#table-des-matières)
